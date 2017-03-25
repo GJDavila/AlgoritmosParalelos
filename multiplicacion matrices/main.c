@@ -1,6 +1,5 @@
 
-using namespace std;
-
+ 
 int main( )
 {
   int af, ac, bf, bc, i, j, k;
