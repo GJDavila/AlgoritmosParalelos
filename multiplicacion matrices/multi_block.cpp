@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <ctime>
 
 
 void crear_matriz(int **&A,int f,int c)
@@ -73,7 +74,7 @@ int main( )
  
   clock_t start = clock();
   BlockMultiplication(A,B,C);
-  printf("Tiempo transcurrido bloques : %f", ((double)clock() - start));
+  printf("Tiempo transcurrido bloques : %f", ((double)clock() - start) / CLOCKS_PER_SEC);
   printf("\n");
  // mostrar_matriz(A,af,ac);
   // mostrar_matriz(B,bf,bc);

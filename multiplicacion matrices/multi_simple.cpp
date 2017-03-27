@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include <ctime>
 
 void crear_matriz(int **&A,int f,int c)
 {
@@ -68,8 +68,8 @@ int main( )
    
  clock_t start = clock();
   multiplicacionsimple(A,B,C,n,n,n,n);
-  printf("Tiempo transcurrido simple : %f", ((double)clock() - start));
-
+  printf("Tiempo transcurrido simple : %f", ((double)clock() - start) / CLOCKS_PER_SEC);
+ printf("\n");
    
   // mostrar_matriz(B,bf,bc);
  // mostrar_matriz(A,af,ac);
