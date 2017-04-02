@@ -1,0 +1,2 @@
+ mpicc mpi.c -o mpi
+ mpirun -np 2 ./mpi
