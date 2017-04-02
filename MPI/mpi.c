@@ -2,11 +2,8 @@
 #include <mpi.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
-
-
-#define BUFSIZE 128
-#define TAG 0
+ 
+ 
 
 int main(int argc, char *argv[])
 {
