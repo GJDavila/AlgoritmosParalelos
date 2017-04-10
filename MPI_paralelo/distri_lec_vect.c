@@ -6,6 +6,8 @@
 ///--mpicc distri_lec_vect.c -o  distri_lec_vect
 ///--mpirun -np 5 ./distri_lec_vect
 
+
+
 void Read_vector(double local_a[], int local_n, int n, char vec_name[], int my_rank, MPI_Comm comm){
   double* a = NULL;
   int i;
@@ -30,8 +32,6 @@ void Read_vector(double local_a[], int local_n, int n, char vec_name[], int my_r
         printf("%f ", local_a[i]);
       } printf("\n ");
   }
-
-
 }
 
 void Print_vector(double local_b[], int local_n, int n, char title[], int my_rank, MPI_Comm comm){

@@ -6,6 +6,7 @@
 ///--mpicc trapezoide.c -o  trapezoide
 ///--mpirun -np 5 ./trapezoide
 
+
 float f(float x)
 {
   float return_val=x*x*x;

@@ -4,6 +4,7 @@
 #include <unistd.h>
 ///--mpicc multi_matr_vec.c -o  multi_matr_vec
 ///--mpirun -np 5 ./multi_matr_vec
+
 void Read_vector(double local_a[], int local_n, int n, char vec_name[], int my_rank, MPI_Comm comm){
   double* a = NULL;
   int i;

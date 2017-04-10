@@ -6,6 +6,7 @@
 #define N 100
 
 
+
 /* initialize the data to random values based on rank (so they're different) */
 void init(int* data, int rank) {
   int i;
