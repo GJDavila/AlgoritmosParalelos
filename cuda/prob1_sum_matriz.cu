@@ -2,7 +2,7 @@
 #include<iostream>
 |using namespace std;
 
-
+///funciones kernel
 
  __global__ void  MatrizAddKernel_B(float *A, float *B, float* C, int n)
  {

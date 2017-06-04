@@ -2,7 +2,7 @@
 #include<iostream>
  using namespace std;
 
-
+///-----------funcion kernel
 __global__ void MatrizVectorKernel(float *A, float* B, float* C, int n)
 {
 		int i=n*blockIdx.x;

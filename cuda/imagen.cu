@@ -93,7 +93,7 @@ void colorConvertKernel(unsigned char * grayImage,unsigned char * rgbImage,int w
     blurkernel(imagem_gpu, input_image, width,  height)
 
     cudaMemcpy(imagem_cpu, imagem_gpu, (width * height * 4) * sizeof(float), cudaMemcpyDeviceToHost);
- 
+
 	//img en gris
 	//IplImage* out_image = cvCreateImage( cvSize(width, height), input_image->depth, bpp);
 	//out_image->imageData = buff;
