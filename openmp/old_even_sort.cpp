@@ -5,6 +5,9 @@
 #include <chrono>
 using namespace std;
 
+
+/// compilar
+/// g++ -fopenmp -std=c++11  old_even_sort.cpp
 void first_odd_even(int *a, int n, int Nthreads)
 {
 	int phase,i,tmp;
@@ -73,7 +76,7 @@ void print_my_vector(int *a,int n)
 {
 	for (int i = 0; i < n; ++i)
 	{
-		cout<a[i]<<" ";
+		cout<<a[i]<<" ";
 	}
 	cout<<endl;
 }

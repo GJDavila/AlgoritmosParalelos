@@ -2,7 +2,11 @@
 #include<iostream>
 |using namespace std;
 
-///funciones kernel
+///compilar
+////usr/local/cuda/bin/nvcc summatriz.cu -o sum
+
+
+///funciones kernels
 
  __global__ void  MatrizAddKernel_B(float *A, float *B, float* C, int n)
  {

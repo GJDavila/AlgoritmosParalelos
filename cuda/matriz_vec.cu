@@ -2,14 +2,21 @@
 #include<iostream>
  using namespace std;
 
+ ///compilar
+ ////usr/local/cuda/bin/nvcc matriz_vec.cu -o multi
+
+
+
 ///-----------funcion kernel
 __global__ void MatrizVectorKernel(float *A, float* B, float* C, int n)
 {
 		int i=n*blockIdx.x;
+    int tmp=0;
 		for(int j=0;j<n;j++)
 		{
-			C[blockIdx.x] += (A[i+j]*B[j]);
+		    tmp+= (A[i+j]*B[j]);
 		}
+    	C[blockIdx.x] =tmp;
 }
 
 void MatrizVector(float *A, float* B, float* C, int n)
