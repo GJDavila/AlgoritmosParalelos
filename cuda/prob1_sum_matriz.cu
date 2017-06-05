@@ -50,7 +50,7 @@
  int main()
  {
    float *A,*B,*C;
-   int n=10;
+   int n=100;
    A=new float[n*n];
    B=new float[n*n];
    C=new float[n*n];
