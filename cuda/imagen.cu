@@ -89,8 +89,10 @@ void colorConvertKernel(unsigned char * grayImage,unsigned char * rgbImage,int w
 
 
 	 //funcion Kernel
-    colorConvertKernel(imagem_gpu, input_image, width,  height)
-    blurkernel(imagem_gpu, input_image, width,  height)
+   dim3 dimGrid(ceil(width/16.0), ceil(height/16.0), 1);
+   dim3 dimBlock(16, 16, 1);
+    colorConvertKernel<<<dimGrid,dimBlock>>>(imagem_gpu, input_image, width,  height)
+    blurkernel<<<dimGrid,dimBlock>>>(imagem_gpu, input_image, width,  height)
 
     cudaMemcpy(imagem_cpu, imagem_gpu, (width * height * 4) * sizeof(float), cudaMemcpyDeviceToHost);
 
